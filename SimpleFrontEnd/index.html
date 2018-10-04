@@ -8,15 +8,20 @@
 <body>
 
 	<nav class="navbar navbar-light bg-light">
-		<a class="navbar-brand" href="#">Serverless Todo App</a>
+		<a class="navbar-brand" href="#">Simple Front End</a>
 		<span class="navbar-text">
-			<a href="https://github.com/ssemyan/TodoServerless" target="_blank">Fork me on GitHub</a>
+			<a href="https://github.com/ssemyan/SimpleFrontEnd" target="_blank">Fork me on GitHub</a>
 		</span>
 	</nav>
 
 	<div class="container mt-5">
-		<h1 class="display-4">Serverless Todo App</h1>
-		<p class="lead text-muted">This simple ToDo application illustrates how to use serverless technology in Azure. This application uses Azure Active Directory for authentication. You can logout <a href="/.auth/logout">here</a>.</p>
+		<h1 class="display-4">Simple Front End</h1>
+		<p class="lead text-muted">
+			Simple HTML and Javascript front end for a Todo list. Set the URL of the local or backend API in <i>vars.js</i> You can also run without an API (items are added or deleted to the list but not persisted to any storage) by setting the <i>noApi</i> variable in <i>vars.js</i> to <i>true</i>.
+		</p>
+		<p class="lead text-muted">
+			An example WebApi backend can be found here: <a href="https://github.com/ssemyan/SimpleSqlBackend">https://github.com/ssemyan/SimpleSqlBackend</a>
+		</p>
 
 		<div class="row pt-5">
 			<div class="col">
@@ -26,7 +31,7 @@
 				<button type="button" class="btn text-right" onclick="AZ.Documents.AddEdit()">+ Add New</button>
 			</div>
 		</div>
-		
+
 		<table class="table">
 			<thead>
 				<tr>

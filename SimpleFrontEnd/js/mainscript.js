@@ -3,7 +3,7 @@
 
 	var docViewModel = {
 		documents: ko.observableArray(),
-		currentUser: ko.observable()
+		currentUser: ko.observable('Local User') // Use this to show the current user if using authentication
 	};
 
 	var apiUrl = "";
@@ -15,13 +15,12 @@
 			apiUrl,
 			null,
 			function (data) {
-				initList(data.Items, data.UserName);
+				initList(data);
 			});
 	}
 
 	function initList(items, username) {
 		docViewModel.documents = ko.observableArray(items);
-		docViewModel.currentUser(username);
 		ko.applyBindings(docViewModel);
 	}
 
@@ -39,7 +38,7 @@
 
 		// Now get the data
 		if (noApi) {
-			initList(null, 'Local User');
+			initList(null);
 		} else {
 			getApiData();
 		}
